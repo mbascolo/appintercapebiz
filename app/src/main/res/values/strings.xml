@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- string ids for registration.xml -->
+    <string name="app_name">RTC Clasificados</string>
+    <string name="username_textview">Usuario:</string>
+    <string name="password_textview">Contraseña:</string>
+    <string name="submit">Publicar</string>
+    
+    <!-- string ids for home.xml -->
+    <string name="post_comment">Publicar aviso</string>
+    <string name="read_comments_title">Últimas publicacinoes</string>
+      <string name="passwords_not_same">Passwords don\'t match</string>
+</resources>
