@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/login"
         android:layout_marginBottom="25dp"
-        android:text="Register" />
+        android:text="Registrarme" />
 
     <Button
         android:id="@+id/login"
@@ -43,7 +43,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:gravity="center"
-        android:text="Android Remote Server Tutorial"
+        android:text="Acceso a Proyecto 1 Beta"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/arrowstars" />
+        android:src="@drawable/carrito" />
 
     <TextView
         android:id="@+id/TextView01"
@@ -78,6 +78,6 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/TextView01"
         android:layout_centerVertical="true"
-        android:text="Username" />
+        android:text="Usuario" />
 
 </RelativeLayout>

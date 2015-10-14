@@ -2,7 +2,7 @@
 <resources>
     <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/MySQLTest1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">RTC Clasificados</string>
+    <string name="app_name">Proyecto 1 - Beta</string>
     <string name="password_textview">Contraseña:</string>
     <string name="passwords_not_same">Passwords don\'t match</string>
     <string name="post_comment">Publicar aviso</string>

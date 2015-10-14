@@ -111,7 +111,7 @@ public class Login extends Activity implements OnClickListener {
 			String username = user.getText().toString();
 			String password = pass.getText().toString();
 			try {
-				// Building Parameters
+				// Construyendo parámetros
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 				params.add(new BasicNameValuePair("username", username));
 				params.add(new BasicNameValuePair("password", password));
