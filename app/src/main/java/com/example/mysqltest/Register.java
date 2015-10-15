@@ -40,7 +40,7 @@ public class Register extends Activity implements OnClickListener{
     private static final String REGISTER_URL = "http://www.beansoft.com.ar/webservusers/register.php";
     
   //testing from a real server:
-    //private static final String REGISTER_URL = "http://www.mybringback.com/webservice/register.php";
+    //private static final String REGISTER_URL = "http://www.beansoft.com.ar/webservusers/register.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";

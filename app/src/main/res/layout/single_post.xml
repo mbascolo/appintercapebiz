@@ -66,9 +66,10 @@
                         android:layout_height="wrap_content"
                         android:gravity="left"
                         android:paddingLeft="5dp"
-                        android:text="Username: "
+                        android:text="Usuario:"
                         android:textColor="#5d5d5d"
-                        android:textStyle="bold" >
+                        android:textStyle="bold"
+                        android:id="@+id/">
                     </TextView>
 
                     <TextView

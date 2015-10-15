@@ -44,7 +44,7 @@ public class AddComment extends Activity implements OnClickListener{
     private static final String POST_COMMENT_URL = "http://www.beansoft.com.ar/webservusers/addcomment.php";
     
   //testing from a real server:
-    //private static final String POST_COMMENT_URL = "http://www.mybringback.com/webservice/addcomment.php";
+    //private static final String POST_COMMENT_URL = "http://www.beansoft.com.ar/webservusers/addcomment.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";

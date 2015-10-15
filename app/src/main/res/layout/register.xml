@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/password"
         android:layout_centerVertical="true"
-        android:text="Username" />
+        android:text="Usuario" />
 
     <EditText
         android:id="@+id/username"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/username"
         android:layout_below="@+id/username"
-        android:text="Password" />
+        android:text="Contraseña" />
 
     <TextView
         android:id="@+id/textView2"
@@ -44,7 +44,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Android Remote Server Tutorial"
+        android:text="Proyecto 1 - Beta"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 
@@ -63,6 +63,6 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/password"
         android:layout_below="@+id/password"
-        android:text="Register" />
+        android:text="Registrar" />
 
 </RelativeLayout>

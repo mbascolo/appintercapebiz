@@ -35,9 +35,9 @@ public class JSONParser {
     
     public JSONObject getJSONFromUrl(final String url) {
 
-        // Making HTTP request
+        // Creando HTTP request
         try {
-            // Construct the client and the HTTP request.
+            // Construyendo el client y el HTTP request.
             DefaultHttpClient httpClient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(url);
 

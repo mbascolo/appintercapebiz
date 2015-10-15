@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/login"
         android:layout_marginBottom="25dp"
-        android:text="Register" />
+        android:text="Registrarme" />
 
     <Button
         android:id="@+id/login"
@@ -78,6 +78,6 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/TextView01"
         android:layout_centerVertical="true"
-        android:text="Username" />
+        android:text="Usuario" />
 
 </RelativeLayout><!-- From: file:/C:/Users/Matias/AndroidStudioProjects/MySQLTest1/app/src/main/res/layout/login.xml -->
