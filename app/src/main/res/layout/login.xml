@@ -62,7 +62,7 @@
         android:layout_above="@+id/password"
         android:layout_alignLeft="@+id/password"
         android:layout_marginLeft="22dp"
-        android:text="Contraseña" />
+        android:text="Password" />
 
     <EditText
         android:id="@+id/username"

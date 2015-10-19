@@ -19,8 +19,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/read_comments_title"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/read_comments_title" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
     <ListView

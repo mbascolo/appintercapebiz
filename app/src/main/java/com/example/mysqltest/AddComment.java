@@ -9,7 +9,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,6 +33,12 @@ public class AddComment extends Activity implements OnClickListener{
 	
 	 // Progress Dialog
     private ProgressDialog pDialog;
+
+    //Defino los íconos de la notificación en la barra de notificación
+    int icono_v = R.drawable.carrito;
+    int icono_r = R.drawable.carritopeq;
+
+
  
     // JSON parser class
     JSONParser jsonParser = new JSONParser();
@@ -44,7 +55,7 @@ public class AddComment extends Activity implements OnClickListener{
     private static final String POST_COMMENT_URL = "http://www.beansoft.com.ar/webservusers/addcomment.php";
     
   //testing from a real server:
-    //private static final String POST_COMMENT_URL = "http://www.beansoft.com.ar/webservusers/addcomment.php";
+    //private static final String POST_COMMENT_URL = "http://www.mybringback.com/webservice/addcomment.php";
     
     //ids
     private static final String TAG_SUCCESS = "success";
@@ -61,15 +72,15 @@ public class AddComment extends Activity implements OnClickListener{
 		
 		mSubmit = (Button)findViewById(R.id.submit);
 		mSubmit.setOnClickListener(this);
-		
+
 	}
 
-	@Override
+    @Override
 	public void onClick(View v) {
 				new PostComment().execute();
 	}
-	
-	
+
+
 	class PostComment extends AsyncTask<String, String, String> {
 		
         @Override
@@ -103,7 +114,7 @@ public class AddComment extends Activity implements OnClickListener{
  
                 Log.d("request!", "starting");
                 
-                //Posting user data to script 
+                //Posteando usando los datos del script
                 JSONObject json = jsonParser.makeHttpRequest(
                 		POST_COMMENT_URL, "POST", params);
  
@@ -113,11 +124,11 @@ public class AddComment extends Activity implements OnClickListener{
                 // json success element
                 success = json.getInt(TAG_SUCCESS);
                 if (success == 1) {
-                	Log.d("Comment Added!", json.toString());    
+                	Log.d("Comentario agregado!", json.toString());
                 	finish();
                 	return json.getString(TAG_MESSAGE);
                 }else{
-                	Log.d("Comment Failure!", json.getString(TAG_MESSAGE));
+                	Log.d("Fallo en comentario!", json.getString(TAG_MESSAGE));
                 	return json.getString(TAG_MESSAGE);
                 	
                 }
@@ -134,6 +145,7 @@ public class AddComment extends Activity implements OnClickListener{
             pDialog.dismiss();
             if (file_url != null){
             	Toast.makeText(AddComment.this, file_url, Toast.LENGTH_LONG).show();
+
             }
  
         }

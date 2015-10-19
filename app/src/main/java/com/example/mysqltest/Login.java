@@ -47,7 +47,8 @@ public class Login extends Activity implements OnClickListener {
 	private static final String LOGIN_URL = "http://www.beansoft.com.ar/webservusers/login.php";
 
 	// testing from a real server:
-	// private static final String LOGIN_URL = "http://www.beansoft.com.ar/webservusers/login.php";
+	// private static final String LOGIN_URL =
+	// "http://www.mybringback.com/webservice/login.php";
 
 	// JSON element ids from repsonse of php script:
 	private static final String TAG_SUCCESS = "success";
@@ -136,7 +137,7 @@ public class Login extends Activity implements OnClickListener {
 					
 					Intent i = new Intent(Login.this, ReadComments.class);
 					finish();
-					startActivity(i); //Aquí comienza la actividad
+					startActivity(i);
 					return json.getString(TAG_MESSAGE);
 				} else {
 					Log.d("Login Failure!", json.getString(TAG_MESSAGE));
