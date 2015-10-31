@@ -155,6 +155,8 @@ public class Login extends Activity implements OnClickListener {
 			// dismiss the dialog once product deleted
 			pDialog.dismiss();
 			if (file_url != null) {
+
+
 				Toast.makeText(Login.this, file_url, Toast.LENGTH_LONG).show();
 			}
 
