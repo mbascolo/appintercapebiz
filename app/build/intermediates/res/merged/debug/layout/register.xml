@@ -44,7 +44,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Android Remote Server Tutorial"
+        android:text="Registrarse"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 

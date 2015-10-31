@@ -84,19 +84,22 @@ public class AddComment extends Activity implements OnClickListener{
 	public void onClick(View v) {
 				new PostComment().execute();
 
+        String post_title = title.getText().toString();
+        String post_message = message.getText().toString();
+
         //Construcción del intent implícito
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.intercap.com.ar/"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
 
         //Construcción de la notificación
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-        builder.setSmallIcon(R.drawable.carritopeq);
+        builder.setSmallIcon(R.drawable.nubeblanca);
         builder.setContentIntent(pendingIntent);
         builder.setAutoCancel(true);
-        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.carritopeq));
-        builder.setContentTitle("Notificación Básica");
-        builder.setContentInfo("Momento para aprender más sobre Android");
-        builder.setSubText("Toca para ver la documentación acerca de Android");
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.carritonotif));
+        builder.setContentTitle(post_title);
+        builder.setContentInfo(post_message);
+        builder.setSubText("Clic para ingresar");
 
         ///... continuar con video https://www.youtube.com/watch?v=QFmv6Up0Izs min 5:30
 
