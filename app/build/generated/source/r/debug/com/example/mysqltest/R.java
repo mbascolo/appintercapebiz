@@ -21,7 +21,7 @@ public final class R {
         public static final int post_border_style=0x7f020007;
     }
     public static final class id {
-        public static final int TextView01=0x7f060004;
+        public static final int TextView01=0x7f060003;
         public static final int bottom_layover=0x7f06000c;
         public static final int box=0x7f06000e;
         public static final int imageView1=0x7f060000;
@@ -30,10 +30,10 @@ public final class R {
         public static final int password=0x7f060009;
         public static final int post_comment=0x7f06000d;
         public static final int register=0x7f060007;
-        public static final int submit=0x7f060003;
-        public static final int textView1=0x7f060006;
+        public static final int submit=0x7f060006;
+        public static final int textView1=0x7f060005;
         public static final int textView2=0x7f060001;
-        public static final int title=0x7f060005;
+        public static final int title=0x7f060004;
         public static final int top_layover=0x7f06000b;
         public static final int username=0x7f06000a;
     }
@@ -46,12 +46,16 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int password_textview=0x7f050001;
-        public static final int passwords_not_same=0x7f050002;
-        public static final int post_comment=0x7f050003;
-        public static final int read_comments_title=0x7f050004;
-        public static final int submit=0x7f050005;
-        public static final int username_textview=0x7f050006;
+        public static final int descripcion_textview=0x7f050001;
+        public static final int password_textview=0x7f050002;
+        public static final int passwords_not_same=0x7f050003;
+        public static final int post_comment=0x7f050004;
+        public static final int publicar_btn=0x7f050005;
+        public static final int read_comments_title=0x7f050006;
+        public static final int submit=0x7f050007;
+        public static final int titulo_home=0x7f050008;
+        public static final int titulo_textview=0x7f050009;
+        public static final int username_textview=0x7f05000a;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

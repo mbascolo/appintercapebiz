@@ -65,4 +65,4 @@
         android:layout_below="@+id/password"
         android:text="Register" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Matias/AndroidStudioProjects/MySQLTest1/app/src/main/res/layout/register.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/src/main/res/layout/register.xml -->

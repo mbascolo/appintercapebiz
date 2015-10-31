@@ -45,12 +45,9 @@ public class ReadComments extends ListActivity {
 	private static final String TAG_POST_ID = "post_id";
 	private static final String TAG_USERNAME = "username";
 	private static final String TAG_MESSAGE = "message";
-	// it's important to note that the message is both in the parent branch of
-	// our JSON tree that displays a "Post Available" or a "No Post Available"
-	// message,
-	// and there is also a message for each individual post, listed under the
-	// "posts"
-	// category, that displays what the user typed as their message.
+	// Que es importante tener en cuenta que el mensaje es tanto en la rama principal de nuestro árbol JSON que muestra
+	// un "Post Disponible" o un mensaje "No Publicar disponible", y también hay un mensaje para cada entrada individual,
+	// que se enumeran en la sección "categoría de mensajes ", que muestra lo que el usuario escribió como su mensaje.
 
 	// An array of all of our comments
 	private JSONArray mComments = null;
@@ -60,7 +57,7 @@ public class ReadComments extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// note that use read_comments.xml instead of our single_post.xml
+		// cuenta que el uso read_comments.xml lugar de nuestra single_post.xml
 		setContentView(R.layout.read_comments);
 	}
 
@@ -68,7 +65,7 @@ public class ReadComments extends ListActivity {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		// loading the comments via AsyncTask
+		// carga comentarios via AsyncTask
 		new LoadComments().execute();
 	}
 
@@ -78,18 +75,17 @@ public class ReadComments extends ListActivity {
 	}
 
 	/**
-	 * Retrieves recent post data from the server.
+	 * Recupera los datos post reciente del servidor.
 	 */
 	public void updateJSONdata() {
 
-		// Instantiate the arraylist to contain all the JSON data.
-		// we are going to use a bunch of key-value pairs, referring
-		// to the json element name, and the content, for example,
-		// message it the tag, and "I'm awesome" as the content..
+		// Crear una instancia ArrayList para contener todos los datos JSON. vamos a usar un montón de pares clave-valor,
+		// en referencia al nombre del elemento json, y el contenido, por ejemplo, el mensaje de que la etiqueta,
+		// y "soy impresionante" como el contenido ..
 
 		mCommentList = new ArrayList<HashMap<String, String>>();
 
-		// Bro, it's time to power up the J parser
+		// Encendemos J Parser
 		JSONParser jParser = new JSONParser();
 		// Feed the beast our comments url, and it spits us
 		// back a JSON object. Boo-yeah Jerome.
@@ -137,12 +133,10 @@ public class ReadComments extends ListActivity {
 	 * Inserts the parsed data into the listview.
 	 */
 	private void updateList() {
-		// For a ListActivity we need to set the List Adapter, and in order to do
-		//that, we need to create a ListAdapter.  This SimpleAdapter,
-		//will utilize our updated Hashmapped ArrayList, 
-		//use our single_post xml template for each item in our list,
-		//and place the appropriate info from the list to the
-		//correct GUI id.  Order is important here.
+		// // Para un ListActivity necesitamos configurar el adaptador de la lista, y con el fin de hacer eso,
+		// tenemos que crear un ListAdapter. Este SimpleAdapter, utilizará nuestra actualizada Hashmapped ArrayList,
+		// utilice nuestra plantilla xml single_post para cada elemento de la lista, y coloque la información apropiada
+		// de la lista para la Identificación del GUI correcta. El orden es importante aquí.
 		ListAdapter adapter = new SimpleAdapter(this, mCommentList,
 				R.layout.single_post, new String[] { TAG_TITLE, TAG_MESSAGE,
 						TAG_USERNAME }, new int[] { R.id.title, R.id.message,
@@ -150,10 +144,9 @@ public class ReadComments extends ListActivity {
 
 		// I shouldn't have to comment on this one:
 		setListAdapter(adapter);
-		
-		// Optional: when the user clicks a list item we 
-		//could do something.  However, we will choose
-		//to do nothing...
+
+		// Opcional: cuando el usuario hace clic en un elemento
+		// de la lista que podríamos hacer algo. Sin embargo, vamos a optar por no hacer nada ...
 		ListView lv = getListView();	
 		lv.setOnItemClickListener(new OnItemClickListener() {
 
@@ -161,9 +154,8 @@ public class ReadComments extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 
-				// This method is triggered if an item is click within our
-				// list. For our example we won't be using this, but
-				// it is useful to know in real life applications.
+				// Este método se activa si un artículo es hacer clic dentro de nuestra lista.
+				// Para nuestro ejemplo no vamos a usar esto, pero es útil saber en aplicaciones de la vida real.
 
 			}
 		});
@@ -175,7 +167,7 @@ public class ReadComments extends ListActivity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(ReadComments.this);
-			pDialog.setMessage("Loading Comments...");
+			pDialog.setMessage("Cargando comentarios...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(true);
 			pDialog.show();

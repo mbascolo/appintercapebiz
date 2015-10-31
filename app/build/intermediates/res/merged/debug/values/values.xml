@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/MySQLTest1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">Proyecto 1 - Beta</string>
+    <string name="app_name">EbizApp</string>
+    <string name="descripcion_textview">Descripción</string>
     <string name="password_textview">Contraseña:</string>
     <string name="passwords_not_same">Passwords don\'t match</string>
-    <string name="post_comment">Publicar aviso</string>
-    <string name="read_comments_title">Últimas publicacinoes</string>
+    <string name="post_comment">Publicar VE</string>
+    <string name="publicar_btn">Publicar</string>
+    <string name="read_comments_title">Últimas VE</string>
     <string name="submit">Publicar</string>
+    <string name="titulo_home">Notificaciones E-biz</string>
+    <string name="titulo_textview">Título</string>
     <string name="username_textview">Usuario:</string>
-    <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/MySQLTest1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

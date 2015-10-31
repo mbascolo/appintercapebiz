@@ -97,7 +97,7 @@ public class Login extends Activity implements OnClickListener {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(Login.this);
-			pDialog.setMessage("Attempting login...");
+			pDialog.setMessage("Intentando inicio de sesión...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(true);
 			pDialog.show();
@@ -122,12 +122,12 @@ public class Login extends Activity implements OnClickListener {
 						params);
 
 				// check your log for json response
-				Log.d("Login attempt", json.toString());
+				Log.d("Intentando ingresar", json.toString());
 
 				// json success tag
 				success = json.getInt(TAG_SUCCESS);
 				if (success == 1) {
-					Log.d("Login Successful!", json.toString());
+					Log.d("Login correcto!", json.toString());
 					// save user data
 					SharedPreferences sp = PreferenceManager
 							.getDefaultSharedPreferences(Login.this);
@@ -140,7 +140,7 @@ public class Login extends Activity implements OnClickListener {
 					startActivity(i);
 					return json.getString(TAG_MESSAGE);
 				} else {
-					Log.d("Login Failure!", json.getString(TAG_MESSAGE));
+					Log.d("Fallo en login!", json.getString(TAG_MESSAGE));
 					return json.getString(TAG_MESSAGE);
 				}
 			} catch (JSONException e) {

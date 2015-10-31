@@ -16,9 +16,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,6 +30,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class AddComment extends Activity implements OnClickListener{
+
+    public static final int NOTIFICACION_ID=1;
 	
 	private EditText title, message;
 	private Button  mSubmit;
@@ -78,6 +83,27 @@ public class AddComment extends Activity implements OnClickListener{
     @Override
 	public void onClick(View v) {
 				new PostComment().execute();
+
+        //Construcción del intent implícito
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.intercap.com.ar/"));
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
+
+        //Construcción de la notificación
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.drawable.carritopeq);
+        builder.setContentIntent(pendingIntent);
+        builder.setAutoCancel(true);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.carritopeq));
+        builder.setContentTitle("Notificación Básica");
+        builder.setContentInfo("Momento para aprender más sobre Android");
+        builder.setSubText("Toca para ver la documentación acerca de Android");
+
+        ///... continuar con video https://www.youtube.com/watch?v=QFmv6Up0Izs min 5:30
+
+        //Enviamos la notificación
+        NotificationManager notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(NOTIFICACION_ID,builder.build());
+
 	}
 
 
