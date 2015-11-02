@@ -4,14 +4,14 @@
     <item android:state_pressed="true"><shape>
             <solid android:color="#1bccf3" />
 
-            <stroke android:width="1dp" android:color="#1b60f3" />
+            <stroke android:width="1dp" android:color="#25ad00" />
 
             <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
         </shape></item>
     <item><shape>
-            <gradient android:angle="270" android:endColor="#1b60f3" android:startColor="#1bccf3" />
+            <gradient android:angle="270" android:endColor="#52f737" android:startColor="#25ad00" />
 
-            <stroke android:width="1dp" android:color="#1b60f3" />
+            <stroke android:width="1dp" android:color="#25ad00" />
 
             <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
         </shape></item>

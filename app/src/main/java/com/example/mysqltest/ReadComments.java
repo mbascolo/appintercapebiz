@@ -101,7 +101,7 @@ public class ReadComments extends ListActivity {
 			// available
 			mComments = json.getJSONArray(TAG_POSTS);
 
-			// looping through all posts according to the json object returned
+			// bucle a través de todos los mensajes de acuerdo con el objeto JSON devuelto
 			for (int i = 0; i < mComments.length(); i++) {
 				JSONObject c = mComments.getJSONObject(i);
 
