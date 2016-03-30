@@ -48,7 +48,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/boxImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
