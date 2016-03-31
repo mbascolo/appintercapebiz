@@ -5,11 +5,11 @@
     <string name="username_textview">Usuario:</string>
     <string name="password_textview">Contraseña:</string>
     <string name="submit">Publicar</string>
-    
+
     <!-- string ids for home.xml -->
     <string name="post_comment">Publicar VE</string>
     <string name="read_comments_title">Últimas VE</string>
-      <string name="passwords_not_same">Passwords don\'t match</string>
+    <string name="passwords_not_same">Passwords don\'t match</string>
     <string name="titulo_home">Notificaciones E-biz</string>
     <string name="titulo_textview">Título</string>
     <string name="descripcion_textview">Descripción</string>
@@ -22,4 +22,5 @@
 
     <string name="acerca_de">Acerca De</string>
     <string name="ventas_especiales">Ventas Especiales</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>

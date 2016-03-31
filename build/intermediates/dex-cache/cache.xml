@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\Parse-1.11.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="54a0d027ea5d5b0dae92833991bb68f9b3da6ca6">
-        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\Parse-1.11.0-b65922069ae5ed1605615c29dcfceb26d5594dd9.jar" />
-    </item>
-    <item
         jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -16,32 +9,18 @@
         <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\classes-dcc2b2c1a1dbf3d565704e978d49488bde8211b2.jar" />
     </item>
     <item
-        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\additionnal.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
-        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\additionnal-845a5c67add9721ba46f0bcfe0776580653c648f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Matias\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-1c77fb2d10a235a6009f0a0d9bbd69f7e6781605.jar" />
-    </item>
-    <item
-        jar="C:\Users\Matias\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.4.0-27d92e60a7d2e1cd4f4d832baef6b9caca04893b.jar" />
-    </item>
-    <item
         jar="C:\Users\Matias\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-bb649745e5e5b033d72b591ba1c9d368868937d6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-6dd18b79102bf6f6d07566cae36b1466d978d359.jar" />
     </item>
     <item
         jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\activation.jar"
@@ -58,11 +37,39 @@
         <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\Parse-1.11.0-b65922069ae5ed1605615c29dcfceb26d5594dd9.jar" />
     </item>
     <item
-        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\mail.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-6dd18b79102bf6f6d07566cae36b1466d978d359.jar" />
+        sha1="428e267abff0d10802ccde86b915da2c20471160">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\mail-3f9ad79cb2126873a5b0363c01e3c9e4da0c633f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\additionnal.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\additionnal-845a5c67add9721ba46f0bcfe0776580653c648f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matias\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.4.0-27d92e60a7d2e1cd4f4d832baef6b9caca04893b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\Parse-1.11.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="54a0d027ea5d5b0dae92833991bb68f9b3da6ca6">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\Parse-1.11.0-b65922069ae5ed1605615c29dcfceb26d5594dd9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matias\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-1c77fb2d10a235a6009f0a0d9bbd69f7e6781605.jar" />
     </item>
     <item
         jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
@@ -72,11 +79,11 @@
         <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\classes-141a4b06c4552eb02d0e3625a9905bd96bfbf598.jar" />
     </item>
     <item
-        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\libs\mail.jar"
+        jar="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="428e267abff0d10802ccde86b915da2c20471160">
-        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\mail-3f9ad79cb2126873a5b0363c01e3c9e4da0c633f.jar" />
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\pre-dexed\debug\classes-a722d923faaa94503327ea96a9b132007266fec5.jar" />
     </item>
 
 </items>

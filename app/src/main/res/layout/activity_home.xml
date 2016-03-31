@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.intercapapp.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="100dp"
+        android:id="@+id/linearLayout3">
+
+        <!--<Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CATÁLOGO"
+            android:onClick="onClick"
+            android:id="@+id/btn_catalogo"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="false"
+            android:textSize="22dp"
+            android:background="#009688"
+            android:textColor="#FFF" />-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="VENTAS ESPECIALES"
+            android:id="@+id/btn_ventas"
+            android:layout_gravity="center_horizontal"
+            android:textSize="22dp"
+            android:background="#009688"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="PRODUCTOS EN FOCO"
+            android:id="@+id/btn_enfoco"
+            android:layout_gravity="center_horizontal"
+            android:textSize="22dp"
+            android:background="#009688"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp" />
+
+        <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="60dp"
+         android:text="Cuenta corriente"
+         android:id="@+id/btn_ctacte"
+         android:layout_gravity="center_horizontal"
+         android:textSize="22dp"
+         android:background="#009688"
+         android:textColor="#FFF"
+         android:layout_marginTop="10dp" /> -->
+
+        <!--<Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Enviar correo"
+            android:id="@+id/btn_enviar_correo"
+            android:layout_gravity="center_horizontal"
+            android:textSize="22dp"
+            android:background="#009688"
+            android:textColor="#FFF"
+            android:layout_marginTop="10dp" /> -->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/textViewManager"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp" />
+
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a leer URL"
+        android:id="@+id/btn_ir_leer"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />-->
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>
