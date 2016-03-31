@@ -4,24 +4,17 @@
     android:layout_height="match_parent"
    >
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/login"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/login"
-        android:layout_marginBottom="25dp"
-        android:text="Registrarme" />
 
-    <Button
-        android:id="@+id/login"
+    <ImageView
+        android:id="@+id/boxImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/register"
-        android:layout_alignLeft="@+id/password"
-        android:layout_alignRight="@+id/password"
-        android:text="Login" />
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/carrito" />
+
+
+
 
     <EditText
         android:id="@+id/password"
@@ -47,13 +40,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/boxImagen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/carrito" />
+
 
     <TextView
         android:id="@+id/TextView01"
@@ -63,20 +50,57 @@
         android:layout_below="@+id/username"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true" />
+
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username_textview"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/boxImagen"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password" />
+
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recordar datos de acceso"
+        android:id="@+id/checkBoxRecordar"
+        android:layout_marginTop="80dp"
+        android:checked="false"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:onClick="OnCheck" />
+
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/login"
+        android:layout_marginBottom="25dp"
+        android:text="Registrarme" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/register"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignRight="@+id/password"
+        android:text="Login"
+        android:onClick="OnClick" />
 
 </RelativeLayout><!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/src/main/res/layout/login.xml -->
