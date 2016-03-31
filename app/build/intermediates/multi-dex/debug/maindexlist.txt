@@ -1,0 +1,138 @@
+
+com/parse/internal/signpost/OAuthProvider.class
+
+com/parse/EventuallyPin.class
+
+com/parse/ParseClassName.class
+
+-keep class com.example.mysqltest.Login { <init>(); }
+-keep class com.example.mysqltest.ListadoVE { <init>(); }
+android/support/v4/view/MenuCompat.class
+
+com/example/mysqltest/PushAplication.class
+
+com/parse/ManifestInfo.class
+
+com/parse/ParseAnalytics.class
+
+com/parse/NotificationCompat$Builder$BigTextStyle.class
+
+com/parse/ParseTwitterUtils.class
+
+com/parse/ParseSession.class
+
+com/parse/PPNSUtil.class
+
+com/parse/PushType.class
+
+    *;
+com/parse/ParseQuery.class
+
+com/parse/PushService.class
+
+com/parse/ParseUser.class
+
+com/parse/PushService$ServiceLifecycleCallbacks.class
+
+com/parse/ParsePlugins.class
+
+bolts/AggregateException.class
+
+com/parse/ParseRole.class
+
+com/parse/PushService$1.class
+
+android/support/v4/app/FragmentManager.class
+
+com/parse/GCMService.class
+
+-keep class com.example.mysqltest.PushAplication {
+android/support/v4/app/FragmentTabHost.class
+
+com/example/mysqltest/JSONParser.class
+
+com/parse/Parse.class
+
+com/parse/internal/AsyncCallback.class
+
+bolts/WebViewAppLinkResolver$2$2.class
+
+com/parse/ParseInstallation.class
+
+-keep public class * extends java.lang.annotation.Annotation {
+com/parse/ProxyService.class
+
+com/example/mysqltest/ReadComments$1.class
+
+-keep class com.example.mysqltest.AgregarDatos { <init>(); }
+com/parse/interceptors/ParseStethoInterceptor$ParseInterceptorHttpRequest.class
+
+com/parse/NotificationCompat$Builder$Style.class
+
+-keep class com.parse.GcmBroadcastReceiver { <init>(); }
+com/parse/NotificationCompat$Builder.class
+
+com/parse/ParsePin.class
+
+com/parse/PLog.class
+
+com/parse/ParsePush.class
+
+com/parse/ParsePlugins$Android.class
+
+com/example/mysqltest/AddComment$PostComment.class
+
+com/parse/ParsePushBroadcastReceiver.class
+
+com/parse/ParseObject.class
+
+com/parse/GcmBroadcastReceiver.class
+
+com/example/mysqltest/Login$AttemptLogin.class
+
+-keep class com.parse.ParsePushBroadcastReceiver { <init>(); }
+bolts/Task.class
+
+android/support/v4/widget/ResourceCursorAdapter.class
+
+com/parse/interceptors/ParseStethoInterceptor$ParseInspectorHttpResponse.class
+
+com/example/mysqltest/AddComment.class
+
+-keep class com.parse.PushService { <init>(); }
+com/parse/NotificationCompat.class
+
+com/example/mysqltest/ReadComments$LoadComments.class
+
+-keep class com.example.mysqltest.Registrarse { <init>(); }
+android/support/v4/app/NotificationCompat$Builder.class
+
+-keep public class * extends android.app.backup.BackupAgent {
+com/example/mysqltest/Register$CreateUser.class
+
+com/parse/ParseSQLiteCursor.class
+
+android/support/v4/widget/SlidingPaneLayout.class
+
+android/support/v4/widget/CursorAdapter.class
+
+com/parse/TaskStackBuilderHelper.class
+
+com/parse/ParseNotificationManager.class
+
+    void attachBaseContext(android.content.Context);
+android/support/v4/widget/SimpleCursorAdapter.class
+
+com/example/mysqltest/Login.class
+
+com/example/mysqltest/Register.class
+
+com/parse/ServiceUtils.class
+
+com/parse/GcmRegistrar.class
+
+com/example/mysqltest/ReadComments.class
+
+}
+    <init>();
+android/support/v4/app/NotificationCompat.class

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.herprogramacion.intercapappBeta.Email.FormReservaActivity">
+
+
+    <item android:id="@+id/ventas_especiales" android:title="@string/ventas_especiales"
+        android:orderInCategory="1" app:showAsAction="never" />
+
+    <item android:id="@+id/acerca_de" android:title="Acerca de"
+        android:orderInCategory="2" app:showAsAction="never" android:actionLayout="@id/acerca_de"  />
+
+    <item android:id="@+id/activity_email" android:title="Reservar"
+        android:orderInCategory="3" app:showAsAction="never" android:actionLayout="@id/activity_email"  />
+
+    <item android:id="@+id/cerrar_sesion" android:title="Cerrar sesión"
+        android:orderInCategory="4" app:showAsAction="never" android:actionLayout="@id/cerrar_sesion"  />
+
+
+</menu>

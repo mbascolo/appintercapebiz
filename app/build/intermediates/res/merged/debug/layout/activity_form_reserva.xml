@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.herprogramacion.intercapappBeta.Email.FormReservaActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/LayoutReserva">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textVtaNro"
+            android:hint="Nro"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo"
+            android:id="@+id/textVtaTitulo"
+            android:layout_below="@+id/textVtaNro"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCantidad"
+            android:hint="Cantidad"
+            android:layout_below="@+id/textVtaTitulo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_alignRight="@+id/textVtaTitulo"
+            android:layout_alignEnd="@+id/textVtaTitulo"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editEmailCli"
+            android:hint="EMAIL CLIENTE"
+            android:layout_below="@+id/editCantidad"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:text="mbascolo@gmail.com"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nota"
+            android:id="@+id/textNota"
+            android:layout_below="@+id/editEmailCli"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editNotaVe"
+            android:layout_below="@+id/textNota"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservar"
+            android:id="@+id/btnReservar"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/editNotaVe"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/src/main/res/layout/activity_form_reserva.xml -->

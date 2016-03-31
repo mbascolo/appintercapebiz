@@ -1,0 +1,54 @@
+-injars 'C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\multi-dex\debug\allclasses.jar'
+-outjars 'C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'C:\Users\Matias\AppData\Local\Android\sdk\build-tools\23.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontwarn
+-printconfiguration 'C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.parse.PushService {
+    <init>();
+}
+
+-keep class com.parse.ParsePushBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.parse.GcmBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.example.mysqltest.PushAplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.example.mysqltest.Login {
+    <init>();
+}
+
+-keep class com.example.mysqltest.Registrarse {
+    <init>();
+}
+
+-keep class com.example.mysqltest.AgregarDatos {
+    <init>();
+}
+
+-keep class com.example.mysqltest.ListadoVE {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
