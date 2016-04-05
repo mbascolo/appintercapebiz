@@ -1,4 +1,4 @@
-package com.example.intercapapp;
+package com.aplicacion.intercapapp;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -11,24 +11,19 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mysqltest.R;
+import com.aplicacion.paqueteapp.R;
 
 public class Login extends AppCompatActivity {
 
@@ -44,19 +39,14 @@ public class Login extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-		/*if (ESTADO_LOGIN == "A"){
-			check_recordar = (CheckBox)findViewById(R.id.checkBoxRecordar);*/
+
+		    //check_recordar = (CheckBox)findViewById(R.id.checkBoxRecordar);
 			nombre_usuario = (TextView)findViewById(R.id.username);
 			pass_usuario = (TextView)findViewById(R.id.password);
 			context=this;
 			//CargarPreferencias();
 
-		//} else if (ESTADO_LOGIN == "B"){
 
-			//Intent principal = new Intent(Login.this,HomeActivity.class);
-			//finish();
-			//startActivity(principal);
-		//}
 
 
 	}

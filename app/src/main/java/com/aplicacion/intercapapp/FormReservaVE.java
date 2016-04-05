@@ -1,4 +1,4 @@
-package com.example.intercapapp;
+package com.aplicacion.intercapapp;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.mysqltest.R;
+import com.aplicacion.paqueteapp.R;
 
 
 public class FormReservaVE extends AppCompatActivity {

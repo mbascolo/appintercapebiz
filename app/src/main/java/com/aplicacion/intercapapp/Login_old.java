@@ -1,4 +1,4 @@
-package com.example.intercapapp;
+package com.aplicacion.intercapapp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.mysqltest.R;
+import com.aplicacion.paqueteapp.R;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;

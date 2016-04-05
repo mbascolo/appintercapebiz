@@ -1,4 +1,4 @@
-package com.example.intercapapp;
+package com.aplicacion.intercapapp;
 
 import android.app.Application;
 

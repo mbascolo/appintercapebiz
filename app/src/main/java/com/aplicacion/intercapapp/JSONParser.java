@@ -1,6 +1,13 @@
-package com.example.intercapapp;
-
-import android.util.Log;
+package com.aplicacion.intercapapp;
+ 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -14,21 +21,17 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.List;
-
-public class JSONParser_old {
-
+import android.util.Log;
+ 
+public class JSONParser {
+ 
     static InputStream is = null;
     static JSONObject jObj = null;
     static String json = "";
-
+    HttpURLConnection urlConnection = null;
+ 
     // constructor
-    public JSONParser_old() {
+    public JSONParser() {
  
     }
     
@@ -38,15 +41,11 @@ public class JSONParser_old {
         // Making HTTP request
         try {
             // Construct the client and the HTTP request.
-            DefaultHttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(url);
 
-            // Execute the POST request and store the response locally.
-            HttpResponse httpResponse = httpClient.execute(httpPost);
-            // Extract data from the response.
-            HttpEntity httpEntity = httpResponse.getEntity();
-            // Open an inputStream with the data content.
-            is = httpEntity.getContent();
+            URL miurl = new URL(url);
+            urlConnection = (HttpURLConnection) miurl.openConnection();
+            urlConnection.connect();
+            is = urlConnection.getInputStream();
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -106,7 +105,7 @@ public class JSONParser_old {
                 DefaultHttpClient httpClient = new DefaultHttpClient();
                 HttpPost httpPost = new HttpPost(url);
                 httpPost.setEntity(new UrlEncodedFormEntity(params));
- 
+
                 HttpResponse httpResponse = httpClient.execute(httpPost);
                 HttpEntity httpEntity = httpResponse.getEntity();
                 is = httpEntity.getContent();
