@@ -71,7 +71,7 @@
 
 
 
-   <!-- <CheckBox
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Recordar datos de acceso"
@@ -80,7 +80,7 @@
         android:checked="false"
         android:layout_below="@+id/username"
         android:layout_centerHorizontal="true"
-        android:onClick="OnCheck" /> -->
+        android:onClick="OnCheck" />
 
 
     <Button

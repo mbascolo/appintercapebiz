@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import android.app.IntentService;
 import android.app.NotificationManager;
@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 
 /**
  * Created by Matias on 05/04/2016.

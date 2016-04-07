@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import android.app.Activity;
 import android.content.ComponentName;

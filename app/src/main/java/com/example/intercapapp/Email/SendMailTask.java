@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp.Email;
+package com.example.intercapapp.Email;
 
 /**
  * Created by Matias on 19/01/2016.

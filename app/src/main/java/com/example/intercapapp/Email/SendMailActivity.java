@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp.Email;
+package com.example.intercapapp.Email;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

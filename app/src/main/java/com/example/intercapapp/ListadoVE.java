@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,6 +9,8 @@ import org.json.JSONObject;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +22,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 
 public class ListadoVE extends ListActivity {
 
@@ -28,6 +30,11 @@ public class ListadoVE extends ListActivity {
 	private ProgressDialog pDialog;
 	private ImageView imageView;
 
+	// php read comments script
+
+	// testing on Emulator:
+	//private static final String URL_LISTADO_VE = "http://www.beansoft.com.ar/webservusers/comments.php";
+	//private static final String URL_LISTADO_VE = "http://www.beansoft.com.ar/webservusers/comments2.php";
 	private static final String URL_LISTADO_VE = "http://intercapweb.com.ar/TiendaVirtualv3/rs/ve/lista/";
 
 	// JSON IDS:

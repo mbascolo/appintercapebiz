@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp.Email;
+package com.example.intercapapp.Email;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-import com.aplicacion.intercapapp.AcercaDe;
-import com.aplicacion.intercapapp.ListadoVE;
-import com.aplicacion.paqueteapp.R;
+import com.example.intercapapp.AcercaDe;
+import com.example.intercapapp.ListadoVE;
+import com.example.mysqltest.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

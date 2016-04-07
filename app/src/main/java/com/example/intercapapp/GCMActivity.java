@@ -1,18 +1,18 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -52,6 +52,8 @@ public class GCMActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gcm);
+
+
 
         registerBtn = (Button) findViewById(R.id.register_gcmserver);
         registerBtn.setOnClickListener(new View.OnClickListener() {

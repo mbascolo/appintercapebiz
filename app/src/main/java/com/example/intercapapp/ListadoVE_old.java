@@ -1,4 +1,4 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

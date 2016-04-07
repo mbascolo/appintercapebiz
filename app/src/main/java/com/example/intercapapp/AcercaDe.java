@@ -1,12 +1,13 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 
 public class AcercaDe extends AppCompatActivity {
 

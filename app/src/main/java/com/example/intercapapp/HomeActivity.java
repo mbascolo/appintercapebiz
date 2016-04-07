@@ -1,9 +1,12 @@
-package com.aplicacion.intercapapp;
+package com.example.intercapapp;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.aplicacion.paqueteapp.R;
+import com.example.mysqltest.R;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -33,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //Instancio los botones
         Button btn_ventas = (Button)findViewById(R.id.btn_ventas);
+        Button btn_gcm = (Button)findViewById(R.id.btn_gcm);
         //Button btn_catalogo = (Button)findViewById(R.id.btn_catalogo);
         //Button btn_ctacte = (Button)findViewById(R.id.btn_ctacte);
         //Button btn_enviar_correo = (Button)findViewById(R.id.btn_enviar_correo);
@@ -42,6 +46,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this,ListadoVE.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_gcm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,GCMActivity.class);
                 startActivity(intent);
             }
         });

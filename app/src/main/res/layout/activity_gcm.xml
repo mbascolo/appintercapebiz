@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.aplicacion.intercapapp.GCMActivity">
+    tools:context="com.example.intercapapp.GCMActivity">
 
     <Button
         android:id="@+id/register_gcmserver"
