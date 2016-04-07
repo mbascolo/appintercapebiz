@@ -30,7 +30,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recipient Email"
+        android:text="Dirección de email"
         android:id="@+id/textoRecipientEmail"
         android:layout_gravity="center_horizontal" />
 
@@ -43,7 +43,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email Subject"
+        android:text="Asunto"
         android:id="@+id/textoEmailSubject"
         android:layout_gravity="center_horizontal" />
 
@@ -54,7 +54,7 @@
         android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:text="Message"
+        android:text="Consulta / Mensaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <EditText
@@ -66,6 +66,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/button1"
-        android:text="Send"/>
+        android:text="ENVIAR"/>
 </LinearLayout>
 

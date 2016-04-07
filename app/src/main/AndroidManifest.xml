@@ -59,6 +59,9 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name="com.example.intercapapp.Email.SendMailActivity"
+            android:label="Enviar e-mail al SAI"></activity>
+        <activity
             android:name="com.example.intercapapp.GCMActivity"
             android:label="GCM TEST"></activity>
 

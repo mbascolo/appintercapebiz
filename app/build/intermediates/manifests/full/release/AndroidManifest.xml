@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mysqltest"
+    package="io.androidsensei.pushsensei"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.example.mysqltest.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.example.mysqltest.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.mysqltest.permission.C2D_MESSAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +32,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.mysqltest.Login"
+            android:name="com.example.intercapapp.Login"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,17 +41,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.mysqltest.Register"
-            android:label="@string/app_name" >
-        </activity>
+            android:name="com.example.intercapapp.Registrarse"
+            android:label="@string/app_name" />
         <activity
-            android:name="com.example.mysqltest.AddComment"
-            android:label="@string/app_name" >
-        </activity>
+            android:name="com.example.intercapapp.AgregarDatos"
+            android:label="@string/app_name" />
         <activity
-            android:name="com.example.mysqltest.ReadComments"
-            android:label="@string/app_name" >
-        </activity>
+            android:name="com.example.intercapapp.ListadoVE"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.intercapapp.FormReservaVE"
+            android:label="@string/title_activity_form_reserva_ve" />
+        <activity
+            android:name="com.example.intercapapp.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.intercapapp.Email.SendMailActivity"
+            android:label="Enviar e-mail al SAI" />
+        <activity
+            android:name="com.example.intercapapp.GCMActivity"
+            android:label="GCM TEST" />
+
+        <!-- For receiving GCM message and registration success -->
+        <receiver
+            android:name="com.example.intercapapp.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.intercapapp" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.example.intercapapp.GCMIntentService" />
+        <!-- make sure to add google-play-services_lib from  project properties->android->library -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

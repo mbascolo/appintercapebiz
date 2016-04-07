@@ -44,20 +44,16 @@ public class Login extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-		/*if (ESTADO_LOGIN == "A"){
-			check_recordar = (CheckBox)findViewById(R.id.checkBoxRecordar);*/
+ 			check_recordar = (CheckBox)findViewById(R.id.checkBoxRecordar);
 			nombre_usuario = (TextView)findViewById(R.id.username);
 			pass_usuario = (TextView)findViewById(R.id.password);
 			context=this;
-			//CargarPreferencias();
-
-		//} else if (ESTADO_LOGIN == "B"){
-
-			//Intent principal = new Intent(Login.this,HomeActivity.class);
-			//finish();
-			//startActivity(principal);
-		//}
-
+			CargarPreferencias();
+		//check_recordar.setOnClickListener(new View.OnClickListener(){
+			//public void onClick(View v){
+			//	GuardarPreferencias();
+		//	}
+		//});
 
 	}
 
@@ -156,7 +152,7 @@ public class Login extends AppCompatActivity {
 
 			if(text.equals("Autorizado")){
 
-				//GuardarPreferencias();
+				GuardarPreferencias();
 				Intent principal = new Intent(Login.this,HomeActivity.class);
 				finish();
 				startActivity(principal);
