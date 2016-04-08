@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "io.androidsensei.pushsensei"
+        applicationId "com.intercap.ebiz"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
@@ -27,6 +27,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:design:22.2.1'
     compile 'com.google.android.gms:play-services-gcm:7.5.0'
+    compile 'com.google.code.gson:gson:2.3.1'
 }
 
 

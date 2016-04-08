@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.androidsensei.pushsensei.test">
+    package="com.intercap.ebiz.test">
 
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="io.androidsensei.pushsensei"
+                     android:targetPackage="com.intercap.ebiz"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for io.androidsensei.pushsensei"/>
+                     android:label="Tests for com.intercap.ebiz"/>
 </manifest>

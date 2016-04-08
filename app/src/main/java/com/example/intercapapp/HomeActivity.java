@@ -38,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         //Instancio los botones
         Button btn_ventas = (Button)findViewById(R.id.btn_ventas);
         Button btn_gcm = (Button)findViewById(R.id.btn_gcm);
+        Button btn_testgson = (Button)findViewById(R.id.btn_testgson);
         FloatingActionButton fab_send = (FloatingActionButton)findViewById(R.id.fab_sendemail);
         //Button btn_catalogo = (Button)findViewById(R.id.btn_catalogo);
         //Button btn_ctacte = (Button)findViewById(R.id.btn_ctacte);
@@ -57,6 +58,15 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this,GCMActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btn_testgson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,ListadoVEGson.class);
+                startActivity(intent);
+
             }
         });
 

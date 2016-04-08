@@ -30,11 +30,7 @@ public class ListadoVE extends ListActivity {
 	private ProgressDialog pDialog;
 	private ImageView imageView;
 
-	// php read comments script
 
-	// testing on Emulator:
-	//private static final String URL_LISTADO_VE = "http://www.beansoft.com.ar/webservusers/comments.php";
-	//private static final String URL_LISTADO_VE = "http://www.beansoft.com.ar/webservusers/comments2.php";
 	private static final String URL_LISTADO_VE = "http://intercapweb.com.ar/TiendaVirtualv3/rs/ve/lista/";
 
 	// JSON IDS:
@@ -43,11 +39,6 @@ public class ListadoVE extends ListActivity {
 	private static final String TAG_NRO = "nroPool";
 	private static final String TAG_DESCRIPCION = "descripcion";
 	private static final String TAG_PATHIMAGEN = "pathImagenBannerMiniatura";
-
-
-	// Que es importante tener en cuenta que el mensaje es tanto en la rama principal de nuestro árbol JSON que muestra
-	// un "Post Disponible" o un mensaje "No Publicar disponible", y también hay un mensaje para cada entrada individual,
-	// que se enumeran en la sección "categoría de mensajes ", que muestra lo que el usuario escribió como su mensaje.
 
 	// An array of all of our comments
 	private JSONArray mComments = null;
