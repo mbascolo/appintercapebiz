@@ -39,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btn_ventas = (Button)findViewById(R.id.btn_ventas);
         Button btn_gcm = (Button)findViewById(R.id.btn_gcm);
         Button btn_testgson = (Button)findViewById(R.id.btn_testgson);
+        Button btn_adaptador = (Button)findViewById(R.id.btn_adaptador);
         FloatingActionButton fab_send = (FloatingActionButton)findViewById(R.id.fab_sendemail);
         //Button btn_catalogo = (Button)findViewById(R.id.btn_catalogo);
         //Button btn_ctacte = (Button)findViewById(R.id.btn_ctacte);
@@ -69,6 +70,16 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+
+        btn_adaptador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, PruebaLVE.class);
+                startActivity(intent);
+
+            }
+        });
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_sendemail);
         fab.setOnClickListener(new View.OnClickListener() {

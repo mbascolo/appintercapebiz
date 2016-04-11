@@ -49,8 +49,14 @@ public class ListadoVEGson extends AppCompatActivity {
                             ListadoVEBean ve = gson.fromJson(ventaespecial,ListadoVEBean.class);
                             ventasEspeciales.add(ve);
                             TextView t = new TextView(getBaseContext());
+                            TextView e = new TextView(getBaseContext());
+                            TextView s = new TextView(getBaseContext());
                             t.setText(ve.getNroPool()); /*Obtenemos el nro del pool */
+                            e.setText(ve.getDescripcion());
+                            s.setText(ve.getPathImagenBannerMiniatura());
                             stackContent.addView(t);
+                            stackContent.addView(e);
+                            stackContent.addView(s);
 
                         }
 
