@@ -7,25 +7,6 @@ import java.util.List;
  */
 public class ListadoVEBean {
 
-    /**
-     * EJEMPLO
-     * nroPool : 388
-     * descripcion : Second Brand - BUE
-     * pathImagenBannerMiniatura :
-     * FIN EJEMPLO
-
-
-    private List<PoolBean> pool;
-
-    public List<PoolBean> getPool() {
-        return pool;
-    }
-
-    public void setPool(List<PoolBean> pool) {
-        this.pool = pool;
-    }
-
-    public static class PoolBean {*/
         private String nroPool;
         private String descripcion;
         private String pathImagenBannerMiniatura;
@@ -52,6 +33,6 @@ public class ListadoVEBean {
 
         public void setPathImagenBannerMiniatura(String pathImagenBannerMiniatura) {
             this.pathImagenBannerMiniatura = pathImagenBannerMiniatura;
-       // }
+
     }
 }

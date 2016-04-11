@@ -31,22 +31,25 @@ public class ListadoVEGson extends AppCompatActivity {
 
         stackContent = (LinearLayout)findViewById(R.id.StackContent);
 
+        /*HttpCliente crea un cliente que nos permite realizar peticiones web */
+        /*Recibe como parámetro un OnHttpRequestComplete() */
         HttpClient client = new HttpClient(new OnHttpRequestComplete() {
             @Override
             public void onComplete(Response status) {
+                /*Consultamos si se realizó una petición */
                 if(status.isSuccess()){
                     Gson gson = new GsonBuilder().create();
 
                     try {
                         JSONObject jsono = new JSONObject(status.getResult());
-                        JSONArray jsonarray = jsono.getJSONArray("pool");
-                        ArrayList<ListadoVEBean> ventasEspeciales = new ArrayList<ListadoVEBean>();
+                        JSONArray jsonarray = jsono.getJSONArray("pool"); /*Devuelve un JSONArray */
+                        ArrayList<ListadoVEBean> ventasEspeciales = new ArrayList<ListadoVEBean>(); /*Nos permite seleccionar a través de un index */
                         for (int i = 0; i < jsonarray.length(); i++){
                             String ventaespecial = jsonarray.getString(i);
                             ListadoVEBean ve = gson.fromJson(ventaespecial,ListadoVEBean.class);
                             ventasEspeciales.add(ve);
                             TextView t = new TextView(getBaseContext());
-                            t.setText(ve.getNroPool());
+                            t.setText(ve.getNroPool()); /*Obtenemos el nro del pool */
                             stackContent.addView(t);
 
                         }
@@ -61,7 +64,7 @@ public class ListadoVEGson extends AppCompatActivity {
 
             }
         });
-
+        /*Ejecuta la URL */
         client.excecute("http://intercapweb.com.ar/TiendaVirtualv3/rs/ve/lista/");
 
     }
