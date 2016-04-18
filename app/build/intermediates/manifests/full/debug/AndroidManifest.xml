@@ -28,7 +28,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/carritonotif"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -61,13 +61,25 @@
             android:label="Enviar e-mail al SAI" />
         <activity
             android:name="com.example.intercapapp.GCM.MainActivity"
-            android:label="GCM TEST" />
+            android:label="GCM TEST"
+            android:noHistory="true" />
         <activity
             android:name="com.example.intercapapp.GCM.GreetingActivity"
-            android:label="Imagen mensaje" />
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+        </activity>
 
-        <!-- For receiving GCM message and registration success -->
+        <receiver
+            android:name="com.example.intercapapp.GCM.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
+                <category android:name="com.example.intercapapp.GCM" />
+            </intent-filter>
+        </receiver>
 
         <!-- make sure to add google-play-services_lib from  project properties->android->library -->
         <meta-data
@@ -76,6 +88,8 @@
 
         <activity android:name="com.example.intercapapp.ListadoVEGson" />
         <activity android:name="com.example.intercapapp.PruebaLVE" />
+
+        <service android:name="com.example.intercapapp.GCM.GCMNotificationIntentService" />
     </application>
 
 </manifest>
