@@ -57,9 +57,9 @@ public class PruebaLVE extends AppCompatActivity {
                             e.setText(ve.getDescripcion());
                             s.setText(ve.getPathImagenBannerMiniatura());
 
-                            ListAdapter adaptadorVE = new PruebaAdapter(this, ventaespecial);
-                            ListView veListView = (ListView)findViewById(R.id.ListaPrueba);
-                            veListView.setAdapter(adaptadorVE);
+                            //ListAdapter adaptadorVE = new PruebaAdapter(this, ventaespecial);
+                            //ListView veListView = (ListView)findViewById(R.id.ListaPrueba);
+                            //veListView.setAdapter(adaptadorVE);
 
                             listaPrueba.addView(t);
                             listaPrueba.addView(e);

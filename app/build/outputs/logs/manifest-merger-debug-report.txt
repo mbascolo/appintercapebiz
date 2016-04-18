@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:2:1-88:12
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:2:1-82:12
 	xmlns:android
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -85,7 +85,7 @@ ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:24:9-68
 application
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:29:5-86:19
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:29:5-80:19
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:22.2.1] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\AndroidManifest.xml:22:5-20
@@ -157,48 +157,30 @@ ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\Androi
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:61:13-49
 	android:name
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:60:13-74
-activity#com.example.intercapapp.GCMActivity
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:62:9-64:40
+activity#com.example.intercapapp.GCM.MainActivity
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:63:9-65:40
 	android:label
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:64:13-37
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:63:13-63
-receiver#com.example.intercapapp.GCMBroadcastReceiver
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:67:9-76:20
-	android:permission
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:69:13-73
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:64:13-68
+activity#com.example.intercapapp.GCM.GreetingActivity
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:67:9-69:46
+	android:label
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:69:13-43
 	android:name
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:68:13-72
-intent-filter#com.example.intercapapp+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:70:13-75:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:71:17-81
-	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:71:25-78
-action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:72:17-86
-	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:72:25-83
-category#com.example.intercapapp
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:74:17-68
-	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:74:27-65
-service#com.example.intercapapp.GCMIntentService
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:78:9-76
-	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:78:18-73
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:80:9-82:69
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:74:9-76:69
 MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:81:13-58
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:75:13-58
 	android:value
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:82:13-66
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:76:13-66
 activity#com.example.intercapapp.ListadoVEGson
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:84:9-74
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:78:9-74
 	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:84:19-71
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:78:19-71
 activity#com.example.intercapapp.PruebaLVE
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:85:9-79
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:79:9-79
 	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:85:19-67
+		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:79:19-67

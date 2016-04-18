@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/src/main/res/values-v21/colors.xml -->
+    <eat-comment/>
+    <color name="bg_button_login">#A92815</color>
+    <color name="bg_gradient_end">#CA3822</color>
+    <color name="bg_gradient_start">#EB5038</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
     <!-- From: file:/C:/Users/Matias/AndroidStudioProjects/IntercapApp/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <dimen name="navigation_padding_top_default">24dp</dimen>

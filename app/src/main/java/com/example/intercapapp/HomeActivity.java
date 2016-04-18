@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.intercapapp.Email.SendMailActivity;
+import com.example.intercapapp.GCM.MainActivity;
 import com.example.mysqltest.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -57,7 +58,7 @@ public class HomeActivity extends AppCompatActivity {
         btn_gcm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this,GCMActivity.class);
+                Intent intent = new Intent(HomeActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });
