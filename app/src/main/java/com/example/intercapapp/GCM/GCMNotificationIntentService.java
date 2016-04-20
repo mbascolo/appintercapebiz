@@ -79,12 +79,6 @@ public class GCMNotificationIntentService extends IntentService {
 	        defaults = defaults | Notification.DEFAULT_VIBRATE;
 	        defaults = defaults | Notification.DEFAULT_SOUND;
 
-			//Obtengo preferencias param mostrar luego en la push
-			//SharedPreferences prefs = getSharedPreferences("UserDetails",
-			//	Context.MODE_PRIVATE);
-
-			//String mensaje = prefs.getString(MSG_GREET,"Aqui el mensaje");
-
 	        
 	        mNotifyBuilder.setDefaults(defaults);
 	        // Set the content for Notification}
