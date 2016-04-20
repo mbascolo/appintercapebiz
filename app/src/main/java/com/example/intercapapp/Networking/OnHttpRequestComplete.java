@@ -1,4 +1,4 @@
-package com.devazt.networking;
+package com.example.intercapapp.Networking;
 
 /**
  * Created by Neksze on 01/10/2015.

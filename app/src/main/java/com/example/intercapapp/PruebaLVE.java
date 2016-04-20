@@ -1,18 +1,14 @@
 package com.example.intercapapp;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.devazt.networking.HttpClient;
-import com.devazt.networking.OnHttpRequestComplete;
-import com.devazt.networking.Response;
+import com.example.intercapapp.Networking.HttpClient;
+import com.example.intercapapp.Networking.OnHttpRequestComplete;
+import com.example.intercapapp.Networking.Response;
 import com.example.mysqltest.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

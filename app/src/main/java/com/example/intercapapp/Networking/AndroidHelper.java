@@ -1,4 +1,4 @@
-package com.devazt.networking;
+package com.example.intercapapp.Networking;
 
 import android.os.StrictMode;
 

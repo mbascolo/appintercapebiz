@@ -1,6 +1,4 @@
-package com.devazt.networking;
-
-import android.os.StrictMode;
+package com.example.intercapapp.Networking;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

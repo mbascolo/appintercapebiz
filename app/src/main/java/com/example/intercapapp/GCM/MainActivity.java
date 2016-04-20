@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 		}
 		// When Email is invalid
 		else {
-			Toast.makeText(applicationContext, "Please enter valid email",
+			Toast.makeText(applicationContext, "Por favor inserte un email válido",
 					Toast.LENGTH_LONG).show();
 		}
 	}
@@ -116,7 +116,7 @@ public class MainActivity extends Activity {
 				} else {
 					Toast.makeText(
 							applicationContext,
-							"Reg ID Creation Failed.\n\nEither you haven't enabled Internet or GCM server is busy right now. Make sure you enabled Internet and try registering again after some time."
+							"Reg ID Creation Failed.\n\nO bien no se ha habilitado Internet o servidor de GCM es ocupado ahora. Asegúrese de Internet habilitado y registrate de nuevo después de un tiempo."
 									+ msg, Toast.LENGTH_LONG).show();
 				}
 			}
@@ -156,7 +156,7 @@ public class MainActivity extends Activity {
 							prgDialog.dismiss();
 						}
 						Toast.makeText(applicationContext,
-								"Reg Id shared successfully with Web App ",
+								"Reg Id compartido correctamente con la aplicación web ",
 								Toast.LENGTH_LONG).show();
 						Intent i = new Intent(applicationContext,
 								GreetingActivity.class);

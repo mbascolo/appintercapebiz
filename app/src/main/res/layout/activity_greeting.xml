@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.intercapapp.GCM.GreetingActivity">
+    tools:context="com.example.intercapapp.GCM.GreetingActivity"
+    android:weightSum="1">
 
 
 
@@ -15,7 +16,9 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:weightSum="1">
+
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"
@@ -24,20 +27,21 @@
             android:visibility="invisible" />
 
         <ImageView
-            android:layout_width="275dip"
-            android:layout_height="275dip"
+            android:layout_width="204dp"
+            android:layout_height="181dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/carrito" android:id="@+id/greetimg"/>
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight="5">
 
             <TextView
                 android:id="@+id/greetingmsg"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="40dp"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
                 android:text="BIENVENIDA" />
@@ -48,6 +52,24 @@
 
 
     </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="0"
+        android:id="@+id/editTextNota"
+        android:hint="Ingrese los productos y cantidades"
+        android:layout_weight="0.04"
+        android:autoText="false"
+        android:foregroundGravity="top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reservar"
+        android:id="@+id/btn_reservar"
+        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>

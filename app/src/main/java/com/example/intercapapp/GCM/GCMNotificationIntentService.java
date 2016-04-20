@@ -6,11 +6,17 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
+import android.widget.TextView;
 
+import com.example.intercapapp.JSONParser;
 import com.example.mysqltest.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class GCMNotificationIntentService extends IntentService {
 	// Sets an ID for the notification, so it can be updated
@@ -23,11 +29,11 @@ public class GCMNotificationIntentService extends IntentService {
 
 	public static final String TAG = "GCMNotificationIntentService";
 
+
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		Bundle extras = intent.getExtras();
 		GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-
 		String messageType = gcm.getMessageType(intent);
 
 		if (!extras.isEmpty()) {
@@ -72,13 +78,30 @@ public class GCMNotificationIntentService extends IntentService {
 	        defaults = defaults | Notification.DEFAULT_LIGHTS;
 	        defaults = defaults | Notification.DEFAULT_VIBRATE;
 	        defaults = defaults | Notification.DEFAULT_SOUND;
+
+			//Obtengo preferencias param mostrar luego en la push
+			//SharedPreferences prefs = getSharedPreferences("UserDetails",
+			//	Context.MODE_PRIVATE);
+
+			//String mensaje = prefs.getString(MSG_GREET,"Aqui el mensaje");
+
 	        
 	        mNotifyBuilder.setDefaults(defaults);
-	        // Set the content for Notification 
-	        mNotifyBuilder.setContentText("New message from Server");
+	        // Set the content for Notification}
+			JSONParser jsp = new JSONParser();
+
+
+		try {
+			JSONObject obj = new JSONObject(greetMsg);
+
+			mNotifyBuilder.setContentText(obj.getString("greetMsg"));
 	        // Set autocancel
 	        mNotifyBuilder.setAutoCancel(true);
 	        // Post a notification
 	        mNotificationManager.notify(notifyID, mNotifyBuilder.build());
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
 	}
 }
