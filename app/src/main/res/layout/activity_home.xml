@@ -52,25 +52,25 @@
             android:id="@+id/btn_ventas"
             android:layout_gravity="center_horizontal"
             android:textSize="22dp"
-            android:background="#009688"
+            android:background="#da2400"
             android:textColor="#FFF"
             android:layout_marginTop="10dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="PRODUCTOS EN FOCO"
-            android:id="@+id/btn_enfoco"
+            android:text="GCM JAVA"
+            android:id="@+id/btn_gcmjava"
             android:layout_gravity="center_horizontal"
             android:textSize="22dp"
-            android:background="#009688"
+            android:background="#0270be"
             android:textColor="#FFF"
             android:layout_marginTop="10dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="TEST GCM"
+            android:text="GCM PHP"
             android:id="@+id/btn_gcm"
             android:layout_gravity="center_horizontal"
             android:textSize="22dp"
@@ -85,18 +85,7 @@
             android:id="@+id/btn_testgson"
             android:layout_gravity="center_horizontal"
             android:textSize="22dp"
-            android:background="#009688"
-            android:textColor="#FFF"
-            android:layout_marginTop="10dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="LISTADO ADAPTADOR"
-            android:id="@+id/btn_adaptador"
-            android:layout_gravity="center_horizontal"
-            android:textSize="22dp"
-            android:background="#009688"
+            android:background="#e5d600"
             android:textColor="#FFF"
             android:layout_marginTop="10dp" />
 

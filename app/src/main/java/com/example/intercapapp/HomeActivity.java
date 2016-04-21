@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.intercapapp.Email.SendMailActivity;
 import com.example.intercapapp.GCM.MainActivity;
+import com.example.intercapapp.GCMJAVA.MsgActivity;
 import com.example.mysqltest.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -39,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         //Instancio los botones
         Button btn_ventas = (Button)findViewById(R.id.btn_ventas);
         Button btn_gcm = (Button)findViewById(R.id.btn_gcm);
+        Button btn_gcmjava = (Button)findViewById(R.id.btn_gcmjava);
         Button btn_testgson = (Button)findViewById(R.id.btn_testgson);
         Button btn_adaptador = (Button)findViewById(R.id.btn_adaptador);
         FloatingActionButton fab_send = (FloatingActionButton)findViewById(R.id.fab_sendemail);
@@ -46,6 +48,14 @@ public class HomeActivity extends AppCompatActivity {
         //Button btn_ctacte = (Button)findViewById(R.id.btn_ctacte);
         //Button btn_enviar_correo = (Button)findViewById(R.id.btn_enviar_correo);
         //Button btn_ir_leer_url = (Button)findViewById(R.id.btn_ir_leer);
+
+        btn_gcmjava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,MsgActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn_ventas.setOnClickListener(new View.OnClickListener() {
             @Override

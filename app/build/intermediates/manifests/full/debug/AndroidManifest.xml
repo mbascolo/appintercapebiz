@@ -32,7 +32,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.intercapapp.Login"
+            android:name="com.example.intercapapp.HomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,7 +53,7 @@
             android:name="com.example.intercapapp.FormReservaVE"
             android:label="@string/title_activity_form_reserva_ve" />
         <activity
-            android:name="com.example.intercapapp.HomeActivity"
+            android:name="com.example.intercapapp.Login"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -69,6 +69,14 @@
             android:label="@string/app_name"
             android:noHistory="true" >
         </activity>
+        <activity
+            android:name="com.example.intercapapp.GCMJAVA.MsgActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+        </activity>
+
+        <!-- PARA SERVIDOR PHP -->
 
         <receiver
             android:name="com.example.intercapapp.GCM.GcmBroadcastReceiver"
@@ -81,6 +89,22 @@
             </intent-filter>
         </receiver>
 
+        <service android:name="com.example.intercapapp.GCM.GCMNotificationIntentService" />
+
+        <!--
+        PARA SERVIDOR JAVA
+        <receiver
+            android:name="com.example.intercapapp.GCMJAVA.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.hmkcode.android.gcm" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.example.intercapapp.GCMJAVA.GcmMessageHandler" />
+        -->
+
+
         <!-- make sure to add google-play-services_lib from  project properties->android->library -->
         <meta-data
             android:name="com.google.android.gms.version"
@@ -88,8 +112,6 @@
 
         <activity android:name="com.example.intercapapp.ListadoVEGson" />
         <activity android:name="com.example.intercapapp.PruebaLVE" />
-
-        <service android:name="com.example.intercapapp.GCM.GCMNotificationIntentService" />
     </application>
 
 </manifest>
