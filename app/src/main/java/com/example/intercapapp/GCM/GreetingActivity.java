@@ -31,7 +31,6 @@ public class GreetingActivity extends Activity {
 		String json = getIntent().getStringExtra("greetjson");
 		SharedPreferences prefs = getSharedPreferences("UserDetails",
 				Context.MODE_PRIVATE);
-		emailET = (TextView) findViewById(R.id.greetingmsg);
 		
 		// Check if Google Play Service is installed in Device
 		// Play services is needed to handle GCM stuffs
@@ -51,7 +50,7 @@ public class GreetingActivity extends Activity {
 				editor.putString("greetmsg", jsonObj.getString("greetMsg"));
 				editor.commit();
 
-				emailET.setText(prefs.getString("greetmsg", ""));
+
 				// Render Image read from Image URL using aquery 'image' method
 				aq.id(R.id.greetimg)
 						.progress(R.id.progress)
