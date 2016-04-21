@@ -42,20 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btn_gcm = (Button)findViewById(R.id.btn_gcm);
         Button btn_gcmjava = (Button)findViewById(R.id.btn_gcmjava);
         Button btn_testgson = (Button)findViewById(R.id.btn_testgson);
-        Button btn_adaptador = (Button)findViewById(R.id.btn_adaptador);
         FloatingActionButton fab_send = (FloatingActionButton)findViewById(R.id.fab_sendemail);
-        //Button btn_catalogo = (Button)findViewById(R.id.btn_catalogo);
-        //Button btn_ctacte = (Button)findViewById(R.id.btn_ctacte);
-        //Button btn_enviar_correo = (Button)findViewById(R.id.btn_enviar_correo);
-        //Button btn_ir_leer_url = (Button)findViewById(R.id.btn_ir_leer);
-
-        btn_gcmjava.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this,MsgActivity.class);
-                startActivity(intent);
-            }
-        });
 
         btn_ventas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,19 +60,19 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+        btn_gcmjava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,MsgActivity.class);
+                startActivity(intent);
+            }
+        });
+
         btn_testgson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this,ListadoVEGson.class);
-                startActivity(intent);
-
-            }
-        });
-
-        btn_adaptador.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, PruebaLVE.class);
                 startActivity(intent);
 
             }
@@ -100,45 +87,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-        // btn_catalogo.setOnClickListener(new View.OnClickListener() {
-        //     @Override
-        //     public void onClick(View view) {
-        //         Intent intent = new Intent(HomeActivity.this,CatalogoActivity.class);
-        //         startActivity(intent);
-        //     }
-        //});
-
-        // btn_ctacte.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Intent intent = new Intent(HomeActivity.this,CtacteActivity.class);
-        //        startActivity(intent);
-        //    }
-        // });
-
-        // btn_enviar_correo.setOnClickListener(new View.OnClickListener() {
-        //     @Override
-        //     public void onClick(View view) {
-        //         Intent intent = new Intent(HomeActivity.this,FormReservaActivity.class);
-        //         startActivity(intent);
-        //     }
-        // });
-
-        // btn_ir_leer_url.setOnClickListener(new View.OnClickListener() {
-        //     @Override
-        //     public void onClick(View view) {
-        //         Intent intent = new Intent(HomeActivity.this,LeerURL.class);
-        //         startActivity(intent);
-        //     }
-        // });
-
-
 
     }
 

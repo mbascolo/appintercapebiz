@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:2:1-120:12
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:2:1-117:12
 	xmlns:android
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -85,7 +85,7 @@ ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:24:9-68
 application
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:29:5-118:19
+ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:29:5-115:19
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:22.2.1] C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\AndroidManifest.xml:22:5-20
@@ -220,7 +220,3 @@ activity#com.example.intercapapp.ListadoVEGson
 ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:112:9-74
 	android:name
 		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:112:19-71
-activity#com.example.intercapapp.PruebaLVE
-ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:113:9-79
-	android:name
-		ADDED from C:\Users\Matias\AndroidStudioProjects\IntercapApp\app\src\main\AndroidManifest.xml:113:19-67
