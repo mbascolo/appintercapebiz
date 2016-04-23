@@ -3,17 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MsgActivity"
-    android:orientation="vertical" >   
-    
-    <Button 
+    android:orientation="vertical" >
+
+    <Button
         android:id="@+id/btnGetRegId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get RegId"/>
-    
+        android:text="OBTENER REG ID"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRARME"
+        android:id="@+id/RegisterUser" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailTxt"
+        android:layout_gravity="center_horizontal"
+        android:hint="Ingrese su email" />
+
     <EditText
         android:id="@+id/etRegId"
         android:layout_width="match_parent"
         android:layout_height="250dp" />
-    
+
 </LinearLayout>

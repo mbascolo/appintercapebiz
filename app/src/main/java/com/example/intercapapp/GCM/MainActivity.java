@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 
 		prgDialog = new ProgressDialog(this);
 		// Set Progress Dialog Text
-		prgDialog.setMessage("Please wait...");
+		prgDialog.setMessage("Aguarde por favor...");
 		// Set Cancelable as False
 		prgDialog.setCancelable(false);
 
@@ -111,12 +111,12 @@ public class MainActivity extends Activity {
 					storeRegIdinSharedPref(applicationContext, regId, emailID);
 					Toast.makeText(
 							applicationContext,
-							"Registered with GCM Server successfully.\n\n"
+							"Registrado con Exito servidor de GCM.\n\n"
 									+ msg, Toast.LENGTH_SHORT).show();
 				} else {
 					Toast.makeText(
 							applicationContext,
-							"Reg ID Creation Failed.\n\nO bien no se ha habilitado Internet o servidor de GCM es ocupado ahora. Asegúrese de Internet habilitado y registrate de nuevo después de un tiempo."
+							"Reg ID Creación Fallo.\n\nO bien no se ha habilitado Internet o servidor de GCM es ocupado ahora. Asegúrese de Internet habilitado y registrate de nuevo después de un tiempo."
 									+ msg, Toast.LENGTH_LONG).show();
 				}
 			}
