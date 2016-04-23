@@ -1,5 +1,6 @@
 package com.example.intercapapp.GCMJAVA;
 
+import com.example.intercapapp.ListadoVE;
 import com.example.mysqltest.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
@@ -17,7 +18,7 @@ import android.widget.Toast;
 
 public class GcmMessageHandler extends IntentService {
 	Context mContext;
-     String mes;
+     String mes, tit;
      private Handler handler;
 	public GcmMessageHandler() {
 		super("GcmMessageHandler");
@@ -38,10 +39,11 @@ public class GcmMessageHandler extends IntentService {
         // in your BroadcastReceiver.
         String messageType = gcm.getMessageType(intent);
 
-       mes = extras.getString("title");
+		tit = extras.getString("title");
+       	mes = extras.getString("message");
 		EnvioNotificacion();
-       showToast();
-       Log.i("GCM", "Received : (" + messageType + ")  " + extras.getString("title"));
+       	showToast();
+       	Log.i("GCM", "Received : (" + messageType + ")  " + extras.getString("title"));
 
 
 
@@ -59,22 +61,41 @@ public class GcmMessageHandler extends IntentService {
 	}
 
 	public void EnvioNotificacion(){
+
+		Intent resultIntent = new Intent(this, ListadoVE.class);
+		resultIntent.setAction(Intent.ACTION_MAIN);
+		resultIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+		// Because clicking the notification opens a new ("special") activity, there's
+		// no need to create an artificial back stack.
+		PendingIntent resultPendingIntent =
+				PendingIntent.getActivity(
+						this,
+						0,
+						resultIntent,
+						PendingIntent.FLAG_UPDATE_CURRENT
+				);
+
+
 		int numMessages;
 		NotificationCompat.Builder mNotifyBuilder;
 		NotificationManager mNotificationManager;
 
 		mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-// Sets an ID for the notification, so it can be updated
+
+		// Sets an ID for the notification, so it can be updated
 		int notifyID = 1;
 		mNotifyBuilder = new NotificationCompat.Builder(this)
-				.setContentTitle("New Message")
+				.setContentTitle(tit)
 				.setContentText("You've received new messages.")
 				.setSmallIcon(R.drawable.carritonotif);
 		numMessages = 0;
-// Start of a loop that processes data and then notifies the user
+		// Start of a loop that processes data and then notifies the user
 
 		mNotifyBuilder.setContentText(mes)
 				.setNumber(++numMessages);
+		// Set pending intent
+		mNotifyBuilder.setContentIntent(resultPendingIntent);
 		// Because the ID remains unchanged, the existing notification is
 		// updated.
 		mNotificationManager.notify(
