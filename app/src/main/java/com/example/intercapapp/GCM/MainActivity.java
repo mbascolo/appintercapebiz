@@ -85,18 +85,16 @@ public class MainActivity extends Activity {
 	}
 
 	// AsyncTask to register Device in GCM Server
-	private void registerInBackground(final String emailID) {
+	public void registerInBackground(final String emailID) {
 		new AsyncTask<Void, Void, String>() {
 			@Override
 			protected String doInBackground(Void... params) {
 				String msg = "";
 				try {
 					if (gcmObj == null) {
-						gcmObj = GoogleCloudMessaging
-								.getInstance(applicationContext);
+						gcmObj = GoogleCloudMessaging.getInstance(applicationContext);
 					}
-					regId = gcmObj
-							.register(ApplicationConstants.GOOGLE_PROJ_ID);
+					regId = gcmObj.register(ApplicationConstants.GOOGLE_PROJ_ID);
 					msg = "Registration ID :" + regId;
 
 				} catch (IOException ex) {

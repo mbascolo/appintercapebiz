@@ -26,6 +26,14 @@
 
     <uses-permission android:name="com.example.mysqltest.permission.C2D_MESSAGE" />
 
+    <service
+        android:name="com.example.mysqltest.MyInstanceIDService"
+        android:exported="false" >
+        <intent-filter>
+            <action android:name="com.google.android.gms.iid.InstanceID" />
+        </intent-filter>
+    </service>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/carritonotif"
@@ -76,8 +84,7 @@
             android:noHistory="true" >
         </activity>
 
-        <!--
-        PARA SERVIDOR PHP
+        <!-- PARA SERVIDOR PHP -->
 
         <receiver
             android:name="com.example.intercapapp.GCM.GcmBroadcastReceiver"
@@ -89,22 +96,42 @@
                 <category android:name="com.example.intercapapp.GCM" />
             </intent-filter>
         </receiver>
+
         <service android:name="com.example.intercapapp.GCM.GCMNotificationIntentService" />
-        -->
 
+        <!-- GCM Handle the creation, rotation, and updating of registration tokens -->
+        <service
+            android:name="com.example.intercapapp.GCM.MyInstanceIDService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.intercapapp.GCM.GCMNotificationIntentService" />
 
-        <!-- PARA SERVIDOR JAVA -->
+        <!--
+        PARA SERVIDOR JAVA
         <receiver
             android:name="com.example.intercapapp.GCMJAVA.GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
                 <category android:name="com.example.intercapapp.GCM" />
             </intent-filter>
         </receiver>
 
+
         <service android:name="com.example.intercapapp.GCMJAVA.GcmMessageHandler" />
+
+        <service
+            android:name="com.example.intercapapp.GCMJAVA.InstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        -->
+
 
         <!-- make sure to add google-play-services_lib from  project properties->android->library -->
         <meta-data

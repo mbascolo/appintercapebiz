@@ -51,7 +51,17 @@ public class GCMNotificationIntentService extends IntentService {
 			}
 		}
 		GcmBroadcastReceiver.completeWakefulIntent(intent);
+		// AQUI DEBO COLOCAR EL registerInBackground del Main Activity
+		refrescoRegistro();
+
+
 	}
+
+	public void refrescoRegistro(){
+		//sss
+	}
+
+
 
 	private void sendNotification(String greetMsg) {
 	        Intent resultIntent = new Intent(this, GreetingActivity.class);
