@@ -63,5 +63,12 @@
         android:id="@+id/btn_reservar"
         android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="New Text"
+        android:id="@+id/greetingmsg"
+        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

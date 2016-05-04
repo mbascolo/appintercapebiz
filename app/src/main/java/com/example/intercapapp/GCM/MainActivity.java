@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mysqltest.R;
@@ -27,7 +29,8 @@ public class MainActivity extends Activity {
 	RequestParams params = new RequestParams();
 	GoogleCloudMessaging gcmObj;
 	Context applicationContext;
-	String regId = "";
+	String regId = "",imeiId;
+	TelephonyManager manager;
 
 	private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
@@ -42,8 +45,18 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		//Obtengo el IMEI
+		manager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+		imeiId = manager.getDeviceId();
+
+		//Guardamos el Imei en las preferencias de usuario
+		SharedPreferences pref = getSharedPreferences("UserDetails",Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = pref.edit();
+		editor.putString("imei", imeiId);
+
 		applicationContext = getApplicationContext();
 		emailET = (EditText) findViewById(R.id.email);
+
 
 		prgDialog = new ProgressDialog(this);
 		// Set Progress Dialog Text
@@ -68,7 +81,7 @@ public class MainActivity extends Activity {
 	public void RegisterUser(View view) {
 		String emailID = emailET.getText().toString();
 
-		if (!TextUtils.isEmpty(emailID) && Utility.validate(emailID)) {
+		if (!emailID.isEmpty() && Utility.validate(emailID)) {
 			// Check if Google Play Service is installed in Device
 			// Play services is needed to handle GCM stuffs
 			if (checkPlayServices()) {
@@ -106,7 +119,7 @@ public class MainActivity extends Activity {
 			@Override
 			protected void onPostExecute(String msg) {
 				if (!TextUtils.isEmpty(regId)) {
-					storeRegIdinSharedPref(applicationContext, regId, emailID);
+					storeRegIdinSharedPref(applicationContext, regId, emailID, imeiId);
 					Toast.makeText(
 							applicationContext,
 							"Registrado con Exito servidor de GCM.\n\n"
@@ -123,23 +136,24 @@ public class MainActivity extends Activity {
 
 	// Store RegId and Email entered by User in SharedPref
 	private void storeRegIdinSharedPref(Context context, String regId,
-			String emailID) {
+			String emailID, String imeiId) {
 		SharedPreferences prefs = getSharedPreferences("UserDetails",
 				Context.MODE_PRIVATE);
 		SharedPreferences.Editor editor = prefs.edit();
 		editor.putString(REG_ID, regId);
 		editor.putString(EMAIL_ID, emailID);
 		editor.commit();
-		storeRegIdinServer(regId, emailID);
+		storeRegIdinServer(regId, emailID, imeiId);
 
 	}
 
 	// Share RegID and Email ID with GCM Server Application (Php)
-	private void storeRegIdinServer(String regId2, String emailID) {
+	private void storeRegIdinServer(String regId2, String emailID, final String imeiId) {
 		prgDialog.show();
 		params.put("emailId", emailID);
 		params.put("regId", regId);
-		System.out.println("Email id = " + emailID + " Reg Id = " + regId);
+		params.put("imeiId",imeiId);
+		System.out.println("Email id = " + emailID + " Reg Id = " + regId + "Imei Usuario:" + imeiId);
 		// Make RESTful webservice call using AsyncHttpClient object
 		AsyncHttpClient client = new AsyncHttpClient();
 		client.post(ApplicationConstants.APP_SERVER_URL, params,
@@ -159,6 +173,7 @@ public class MainActivity extends Activity {
 						Intent i = new Intent(applicationContext,
 								GreetingActivity.class);
 						i.putExtra("regId", regId);
+						i.putExtra("imeiId", imeiId);
 						startActivity(i);
 						finish();
 					}
