@@ -100,7 +100,7 @@ public class GCMNotificationIntentService extends IntentService {
 				protected void onPostExecute(String msg) {
 					if (!regId.isEmpty()) {
 						storeRegIdinSharedPref(applicationContext, regId, emailID, imeiId);
-
+						return;
 					} else {
 
 						Log.i("GCMNotificationIntentService", "Reg ID Creación Fallo.\n\nO bien no se ha habilitado Internet o " +
@@ -131,43 +131,8 @@ public class GCMNotificationIntentService extends IntentService {
 		params.put("regId", regId);
 		params.put("imei",imeiId);
 		System.out.println("Email id = " + emailID + " Reg Id = " + regId + "Imei Usuario:" + imeiId);
+		return;
 
-		// Make RESTful webservice call using AsyncHttpClient object
-		/*AsyncHttpClient client = new AsyncHttpClient();
-		client.post(ApplicationConstants.APP_SERVER_URL, params,
-				new AsyncHttpResponseHandler() {
-					// When the response returned by REST has Http
-					// response code '200'
-					@Override
-					public void onSuccess(String response) {
-
-						Log.i("GCMNotificationIntentService", "EL ESTADO HTTP ESTÁ OK");
-					}
-
-					// When the response returned by REST has Http
-					// response code other than '200' such as '404',
-					// '500' or '403' etc
-					@Override
-					public void onFailure(int statusCode, Throwable error,
-										  String content) {
-
-						// When Http response code is '404'
-						if (statusCode == 404) {
-						Log.e("GCMNotificationIntentService", "Requested resource not found");
-						}
-
-						// When Http response code is '500'
-						else if (statusCode == 500) {
-						Log.e("GCMNotificationIntentService", "Something went wrong at server end");
-						}
-
-						// When Http response code other than 404, 500
-						else {
-						Log.e("GCMNotificationIntentService", "Unexpected Error occcured! [Most common Error: Device might "
-								+ "not be connected to Internet or remote server is not up and running], check for other errors as well");
-						}
-					}
-				});*/
 	}
 
 	private void sendNotification(String greetMsg) {

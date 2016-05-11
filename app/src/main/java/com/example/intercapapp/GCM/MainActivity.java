@@ -38,7 +38,8 @@ public class MainActivity extends Activity {
 
 	public static final String REG_ID = "regId";
 	public static final String EMAIL_ID = "eMailId";
-	EditText emailET;
+	public static final String SITIO_ID = "sitioId";
+	EditText emailET, sitioCli;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class MainActivity extends Activity {
 
 		applicationContext = getApplicationContext();
 		emailET = (EditText) findViewById(R.id.email);
+		sitioCli = (EditText) findViewById(R.id.editSitio);
 
 
 		prgDialog = new ProgressDialog(this);
@@ -80,6 +82,7 @@ public class MainActivity extends Activity {
 	// When Register Me button is clicked
 	public void RegisterUser(View view) {
 		String emailID = emailET.getText().toString();
+		String sitioID = sitioCli.getText().toString();
 
 		if (!emailID.isEmpty() && Utility.validate(emailID)) {
 			// Check if Google Play Service is installed in Device
@@ -87,7 +90,7 @@ public class MainActivity extends Activity {
 			if (checkPlayServices()) {
 
 				// Register Device in GCM Server
-				registerInBackground(emailID);
+				registerInBackground(emailID,sitioID);
 			}
 		}
 		// When Email is invalid
@@ -98,7 +101,7 @@ public class MainActivity extends Activity {
 	}
 
 	// AsyncTask to register Device in GCM Server
-	public void registerInBackground(final String emailID) {
+	public void registerInBackground(final String emailID, final String sitioID) {
 		new AsyncTask<Void, Void, String>() {
 			@Override
 			protected String doInBackground(Void... params) {
@@ -118,8 +121,8 @@ public class MainActivity extends Activity {
 
 			@Override
 			protected void onPostExecute(String msg) {
-				if (!TextUtils.isEmpty(regId)) {
-					storeRegIdinSharedPref(applicationContext, regId, emailID, imeiId);
+				if (!regId.isEmpty()) {
+					storeRegIdinSharedPref(applicationContext, regId, emailID, imeiId, sitioID);
 					Toast.makeText(
 							applicationContext,
 							"Registrado con Exito servidor de GCM.\n\n"
@@ -136,24 +139,26 @@ public class MainActivity extends Activity {
 
 	// Store RegId and Email entered by User in SharedPref
 	private void storeRegIdinSharedPref(Context context, String regId,
-			String emailID, String imeiId) {
+										String emailID, String imeiId, String sitioID) {
 		SharedPreferences prefs = getSharedPreferences("UserDetails",
 				Context.MODE_PRIVATE);
 		SharedPreferences.Editor editor = prefs.edit();
 		editor.putString(REG_ID, regId);
 		editor.putString(EMAIL_ID, emailID);
+		editor.putString(SITIO_ID, sitioID);
 		editor.commit();
-		storeRegIdinServer(regId, emailID, imeiId);
+		storeRegIdinServer(regId, emailID, imeiId, sitioID);
 
 	}
 
 	// Share RegID and Email ID with GCM Server Application (Php)
-	private void storeRegIdinServer(String regId2, String emailID, final String imeiId) {
+	private void storeRegIdinServer(String regId2, String emailID, final String imeiId, final String sitioId) {
 		prgDialog.show();
 		params.put("emailId", emailID);
 		params.put("regId", regId);
 		params.put("imeiId",imeiId);
-		System.out.println("Email id = " + emailID + " Reg Id = " + regId + "Imei Usuario:" + imeiId);
+		params.put("sitioId",sitioId);
+		System.out.println("Email id = " + emailID + " Reg Id = " + regId + "Imei Usuario:" + imeiId + " Sitio Cliente:" + sitioId);
 		// Make RESTful webservice call using AsyncHttpClient object
 		AsyncHttpClient client = new AsyncHttpClient();
 		client.post(ApplicationConstants.APP_SERVER_URL, params,
@@ -174,6 +179,7 @@ public class MainActivity extends Activity {
 								GreetingActivity.class);
 						i.putExtra("regId", regId);
 						i.putExtra("imeiId", imeiId);
+						i.putExtra("sitioId",sitioId);
 						startActivity(i);
 						finish();
 					}
